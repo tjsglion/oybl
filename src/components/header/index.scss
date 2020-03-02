@@ -1,0 +1,161 @@
+@import '../../style/common/custom.scss';
+@import '../../style/mixins/index.scss';
+#headerWrap{
+  .main-wrap{
+    position: relative;
+    font-size: 0;
+  }
+  .logo,
+  .nav{
+    @include displayInlineBlock;
+  }
+  .logo-link{
+    position: relative;
+    display: inline-block;
+    height: $header-height;
+    vertical-align: top;
+    .icon{
+      position: absolute;
+      font-size: 80px;
+      color: $active-color;
+    }
+  }
+  .logo-sdwl{
+    position: relative;
+    left: 120px;
+    top: 18px;
+    width: 360px;
+    height: 40px;
+    &::before{
+      position: absolute;
+      left: -20px;
+      content: '';
+      border-left: 1px solid $border-color-ccc;
+      height: 45px;
+    }
+  }
+  .sdgswl-img{
+    display: inline-block;
+    // width: 100%;
+    // height: 100%;
+    position: relative;
+    top: 20px;
+    height: 40px;
+    width: 450px;
+  }
+  .logo-spit{
+    position: relative;
+    &::after{
+      position: absolute;
+      right: -100px;
+      top: -22px;
+      content: '';
+      border-right: 1px solid $border-color-ccc;
+      height: 45px;
+    }
+  }
+  .nav{
+    position: relative;
+    float: right;
+    font-size: 0;
+  }
+  .nav-item{
+    @include displayInlineBlock;
+    font-size: $font-size-16;
+    padding: 0 $padding-20;
+    position: relative;
+    &::before{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      bottom: 0;
+      background: $active-color;
+      content: '';
+    }
+    .nav-link{
+      display: block;
+      position: relative;
+      height: 100%;
+      color: $font-color;
+      z-index: 5;
+    }
+    &::before,
+    .nav-link{
+      transition: all .3s;
+    }
+    &.active{
+      &::before{
+        top: 0;
+      }
+      .nav-link{
+        color: #fff;
+      }
+    }
+  }
+  .wx-info{
+    position: absolute;
+    right: -($padding-20 + 5px);
+    top: 0;
+    cursor: pointer;
+    .icon{
+      font-size: $font-size-24;
+    }
+    .wx-ercode{
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 60px;
+      width: 72px;
+      height: 72px;
+      margin-left: -24px;
+      box-sizing: border-box;
+      border: 1px solid #d5e9ff;
+      text-align: center;
+      border-radius: 5px;
+      background-color: $font-color-white;
+
+      &::before,
+      &::after{
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        left: 50%;
+      }
+      &::before{
+        bottom: 100%;
+        border: 6px solid transparent;
+        border-bottom-color: #d5e9ff;
+        margin-left: -6px;
+      }
+      &::after{
+        bottom: 100%;
+        border: 4px solid transparent;
+        border-bottom-color: #fff;
+        margin-left: -4px;
+      }
+    }
+    .wx-img{
+      margin-top: 8px;
+    }
+    &:hover{
+      .wx-ercode{
+        display: block;
+      }
+    }
+  }
+  .header-mobile-show{
+    display: none;
+  }
+}
+.fixed{
+  position: fixed !important;
+  top: 0px;
+  z-index: 100 !important;
+  width: 100%;
+  animation: slideInDown .5s;
+  height: $header-height;
+  // background: rgb(10, 15, 22);
+}
+@import './index-media.scss';

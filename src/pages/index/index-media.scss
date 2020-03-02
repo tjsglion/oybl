@@ -1,0 +1,195 @@
+@import '../../style/common/custom.scss';
+@import '../../style/mixins/index.scss';
+@media all and (max-width: $max-width-750) {
+  #main{
+    .mobile-show{
+      display: block;
+    }
+    .mobile-hide{
+      display: none;
+    }
+    .banner-wrap{
+      height: px2rem(538);
+      background: url(../../assets/oybl-banner-bg-750.png) center no-repeat;
+      background-size: cover;
+      .banner-btn{
+        height: px2rem(110);
+        &::before{
+          background-color: rgba(0,0,0, .7);
+        }
+      }
+      .banner-btn-desc{
+        left: px2rem(30);
+        top: px2rem(12);
+        .banner-icon{
+          width: px2rem(84);
+          height: px2rem(84);
+          // background-color: gold;
+          &::before{
+            width: px2rem(72);
+            height: px2rem(72);
+            left: px2rem(6);
+            top: px2rem(6)
+          }
+          .icon{
+            font-size: px2rem(70);
+            top: px2rem(5);
+          }
+        }
+      }
+      .btn-info{
+        right: px2rem(30);
+        top: 50%;
+        height: px2rem(68);
+        line-height: px2rem(68);
+        font-size: px2rem(26);
+        padding: 0 px2rem(55) 0 px2rem(35);
+        margin-top: px2rem(-34);
+        width: auto;
+        .icon{
+          top: px2rem(0);
+          font-size: px2rem(28);
+          right: px2rem(15);
+        }
+      }
+      .banner-mobile-desc-txt{
+        position: absolute;
+        top: px2rem(12);
+        left: px2rem(110);
+        color: #fff;
+        font-size: px2rem(22);
+        line-height: 1.5;
+        width: px2rem(260);
+      }
+      .banner-title{
+        left: px2rem(-65);
+      }
+      .banner-desc{
+        right: px2rem(120);
+        top: px2rem(-10);
+        .banner-desc-txt{
+          width: px2rem(350);
+          height: px2rem(24);
+          &::before{
+            left: px2rem(50);
+            top: px2rem(240);
+            background: url(../../assets/banner-desc-750.png) center no-repeat;
+            background-size: contain;
+            width: px2rem(350);
+            height: px2rem(24);
+          }
+        }
+      }
+    }
+    .news-wrap{
+      height: px2rem(350);
+      .news-mobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: px2rem(350);
+        .flex-item:first-child{
+          width: px2rem(450);
+          .news-title{
+            display: flex;
+            align-items: center;
+            font-size: px2rem(24);
+            color: #4c4c4c;
+            line-height: 1.2;
+            height: px2rem(60);
+            margin: 0;
+            padding: 0;
+            margin-top: px2rem(60);
+          }
+          .news-desc{
+            margin-top: px2rem(28);
+            font-size: px2rem(22);
+            color: #666;
+            line-height: px2rem(36);
+            overflow-y: auto;
+            height: px2rem(200);
+          }
+        }
+        .item-img{
+          margin-top: px2rem(60);
+          width: px2rem(224);
+          height: px2rem(164);
+        }
+      }
+    }
+
+    .train-desc-title{
+      position: absolute;
+      top: 0;
+      left: px2rem(30);
+      z-index: 100;
+      .title{
+        padding: 0;
+        margin-top: px2rem(20);
+        line-height: 1;
+        .title-txt{
+          position: relative;
+          font-size: px2rem(32);
+          color: #fff;
+          &::before{
+            position: absolute;
+            left: 0;
+            bottom: px2rem(-20);
+            right: 0;
+            content: '';
+            border-bottom: px2rem(4) solid $active-color;
+          }
+        }
+      }
+    }
+    .video-wrap{
+      height: px2rem(520);
+      .slide-info{
+        height: 100%;
+        width: px2rem(655);
+        margin-top: px2rem(30);
+        margin-left: px2rem(20);
+        // border-bottom: 2px solid green;
+        .slide-img{
+          height: px2rem(334);
+        }
+        .slide-desc .item-name{
+          padding: 0 px2rem(15);
+          margin: 0;
+        }
+      }
+    }
+
+  }
+  #video-play-wrap{
+    background: rgba(0, 0, 0, .8);
+    .video-model{
+      position: absolute;
+      top: 50%;
+      left: px2rem(30);
+      // width: px2rem(600);
+      width: px2rem(500);
+      height: px2rem(300);
+      margin-top: px2rem(-250);
+      margin-left: px2rem(110);
+      // background: #fff;
+      .video-play{
+        width: px2rem(500);
+        height: px2rem(300);
+        // height: 100%;
+      }
+      .close-video{
+        position: absolute;
+        right: px2rem(-50);
+        top: px2rem(10);
+        font-size: px2rem(40);
+        background: #ee3232;
+        width: px2rem(50);
+        height: px2rem(50);
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}

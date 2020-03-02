@@ -1,0 +1,54 @@
+@import '../../style/common/custom.scss';
+@import '../../style/mixins/index.scss';
+@media all and (max-width: $max-width-750) {
+  .address-wrap{
+    width: px2rem(750);
+    height: px2rem(420);
+    background: url(../../assets/about-map-750.jpg) center no-repeat;
+    background-size: cover;
+    .dot{
+      top: px2rem(5);
+      .dot-el{
+        width: px2rem(42);
+        height: px2rem(42);
+        &::before{
+          width: px2rem(22);
+          height: px2rem(22);
+          margin-left: px2rem(-11);
+          margin-top: px2rem(-11);
+        }
+      }
+      .prefix{
+        width: px2rem(390);
+        height: px2rem(390);
+        margin-left: px2rem(-195);
+        margin-top: px2rem(-195);
+      }
+      .suffix{
+        width: px2rem(120);
+        height: px2rem(120);
+        margin-left: px2rem(-60);
+        margin-top: px2rem(-60);
+      }
+      .sdgs-txt{
+        top: px2rem(8);
+        left: px2rem(40);
+        width: px2rem(178);
+        height: px2rem(29);
+        background: url(../../assets/sdgs-txt-750.jpg) center no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  .title-wrap{
+    height: px2rem(144);
+    .txt{
+      .txt-info{
+        font-size: px2rem(32);
+        line-height: px2rem(144);
+        height: px2rem(144);
+        padding: 0 px2rem(25);
+      }
+    }
+  }
+}

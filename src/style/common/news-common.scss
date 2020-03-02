@@ -1,0 +1,22 @@
+@import './custom.scss';
+#main > .main-wrap{
+  display: flex;
+  padding: 0;
+  .news-info-wrap{
+    width: 700px;
+    border-right: 1px solid $breadcrumb-border-color;
+  }
+  .news-ad{
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+}
+
+@media all and (max-width: $max-width-750) {
+  #main > .main-wrap{
+    .news-info-wrap{
+      width: px2rem(750);
+      border-right: none;
+    }
+  }
+}

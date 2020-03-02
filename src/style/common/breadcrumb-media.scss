@@ -1,0 +1,40 @@
+@import '../../style/common/custom.scss';
+@import '../../style/mixins/index.scss';
+@media all and (max-width: $max-width-750) {
+  .breadcrumb{
+    display: flex;
+    align-items: center;
+    height: px2rem(114);
+    border-bottom: none;
+    .crumb-text,
+    .crumb-link{
+      font-size: px2rem(28);
+      margin-left: px2rem(60);
+    }
+
+    .crumb-arrow{
+      position: relative;
+      left: 0;
+      top: 0;
+      &:before,
+      &:after{
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        content: ' ';
+      }
+      &:before{
+        margin-top: px2rem(-10);
+        margin-left: px2rem(26);
+        border:px2rem(10) solid transparent;
+        border-left-color: $font-color-666;
+      }
+      &:after{
+        margin-top: px2rem(-8);
+        margin-left: px2rem(26);
+        border:px2rem(8) solid transparent;
+        border-left-color:#fff;
+      }
+    }
+  }
+}

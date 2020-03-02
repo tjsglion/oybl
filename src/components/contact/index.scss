@@ -1,0 +1,56 @@
+@import '../../style/common/custom.scss';
+.mobile-show{
+  display: none;
+}
+.contact-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  .contact-item{
+    width: 255px;
+    background-color: $font-color-white;
+    padding: 0 $padding-20 50px;
+  }
+  .item-icon{
+    margin-top: 30px;
+    height: 34px;
+    line-height: 34px;
+    .icon{
+      font-size: $font-size-20;
+    }
+  }
+  .item-title{
+    margin-top: 14px;
+    .title-txt{
+      line-height: 40px;
+      font-size: $font-size-16;
+      color: $font-color-333;
+      font-weight: bold;
+    }
+  }
+  .item-desc{
+    position: relative;
+    .desc-info{
+      display: block;
+      line-height: 22px;
+      color: font-color-333;
+      font-size: $font-size;
+      .phone{
+        margin-left: 10px;
+        font-size: $font-size-18;
+      }
+    }
+    .desc-wx{
+      position: absolute;
+      right: 30px;
+      top: -40px;
+    }
+  }
+}
+.contact-color{
+  .icon{
+    color: $active-color;
+  }
+}
+@import './index-media.scss';

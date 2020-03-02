@@ -1,0 +1,36 @@
+@import '../../style/common/custom.scss';
+@import '../../style/mixins/index.scss';
+@media all and (max-width: $max-width-750) {
+  .mobile-hide{
+    display: none;
+  }
+  .mobile-show{
+    display: block !important;
+  }
+
+  .news-info-wrap{
+    .mobile-img{
+      // background: gold;
+      width: px2rem(690);
+      height: px2rem(300);
+    }
+    .news-title{
+      line-height: px2rem(50);
+      font-size: px2rem(36);
+      height: px2rem(180);
+    }
+    .news-desc{
+      font-size: px2rem(28);
+      line-height: 1.5;
+      min-height: none;
+      max-height: none;
+      padding-right: px2rem(30);
+      padding-bottom: px2rem(50);
+    }
+  }
+
+  .mobile-banner{
+
+    height: px2rem(114);
+  }
+}

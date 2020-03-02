@@ -1,0 +1,33 @@
+@import '../../style/common/custom.scss';
+.summary-warp{
+  position: relative;
+  width: 100%;
+  border-bottom: 2px solid $summary-border-color;
+  padding-top: 34px;
+  z-index: 10;
+  .title{
+    .title-txt{
+      display: inline-block;
+      position: relative;
+      color: $font-color-333;
+      font-size: $font-size-16;
+      line-height: 40px;
+      font-weight: bold;
+      &::before{
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        right: 0;
+        content: '';
+        border-bottom:2px solid $active-color;
+      }
+    }
+  }
+  .summary-more{
+    position: absolute;
+    right: 10px;
+    top: 45px;
+    font-size: 14px;
+  }
+}
+@import './index-media.scss';

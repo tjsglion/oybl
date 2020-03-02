@@ -1,0 +1,415 @@
+@import '../../style/common/custom.scss';
+@import '../../style/mixins/index.scss';
+.mobile-show{
+  display: none;
+}
+.load-more{
+  font-size: $font-size;
+  color: $font-color-666;
+  cursor: pointer;
+}
+/** banner */
+.banner-wrap{
+  position: relative;
+  height: 470px;
+  // background: url(../../assets/oybl-banner-bg.png) center no-repeat;
+  // background-size: cover;
+  .main-wrap{
+    position: relative;
+    height: 100%;
+  }
+  .banner-bg-1,
+  .banner-bg-2,
+  .banner-bg-3,
+  .banner-bg-4{
+    height: 100%;
+    width: 100%;
+  }
+  .banner-bg-1{
+    background: url(../../assets/banner-bg-1.jpg) center no-repeat;
+    background-size: cover;
+    @media all and (max-width: $max-width-750){
+      background: url(../../assets/banner-bg-750-1.jpg) center no-repeat;
+      background-size: cover;
+    }
+  }
+  .banner-bg-2{
+    background: url(../../assets/banner-bg-2.jpg) center no-repeat;
+    background-size: cover;
+    @media all and (max-width: $max-width-750){
+      background: url(../../assets/banner-bg-750-2.jpg) center no-repeat;
+      background-size: cover;
+    }
+  }
+  .banner-bg-3{
+    background: url(../../assets/banner-bg-3.jpg) center no-repeat;
+    background-size: cover;
+    @media all and (max-width: $max-width-750){
+      background: url(../../assets/banner-bg-750-3.jpg) center no-repeat;
+      background-size: cover;
+    }
+  }
+  .banner-bg-4{
+    background: url(../../assets/banner-bg-4.jpg) center no-repeat;
+    background-size: cover;
+    @media all and (max-width: $max-width-750){
+      background: url(../../assets/banner-bg-750-4.jpg) center no-repeat;
+      background-size: cover;
+    }
+  }
+  .banner-title,
+  .banner-desc{
+    position: absolute;
+    top: 0;
+  }
+  .banner-title{
+    // left: -50px;
+    right: -50px;
+    .banner-title-txt{
+      position: relative;
+      width: 811px;
+      height: 246px;
+      &::before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        background: url(../../assets/oybl-banner-title.png) center no-repeat;
+        background-size: cover;
+        width: 811px;
+        height: 246px;
+        @media all and (max-width: $max-width-750) {
+          // right: px2rem(-100);
+          // top: px2rem(-70);
+          left: px2rem(55);
+          background: url(../../assets/oybl-banner-title-750.png) center no-repeat;
+          background-size: cover;
+          width: px2rem(750);
+          height: px2rem(333);
+        }
+      }
+    }
+  }
+  .banner-desc{
+    right: -40px;
+    top: 185px;
+    .banner-desc-txt{
+      position: relative;
+      width: 449px;
+      height: 208px;
+      &::before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        background: url(../../assets/oybl-banner-sub.png) center no-repeat;
+        background-size: cover;
+        width: 449px;
+        height: 208px;
+      }
+    }
+  }
+
+  .banner-btn{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+    &::before{
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      background-color: rgba(0,0,0, .4);
+    }
+    .banner-btn-desc{
+      position: absolute;
+      left: 20px;
+      top: 5px;
+      font-size: 0;
+      .banner-icon,
+      .banner-desc-txt{
+        @include displayInlineBlock;
+        color: #fff;
+
+      }
+      .banner-icon{
+        width: 70px;
+        height: 70px;
+        background-color: #000;
+        border-radius: 50%;
+        text-align: center;
+        &::before{
+          position: absolute;
+          left: 5px;
+          top: 5px;
+          content: '';
+          border-radius: 50%;
+          background: $active-color;
+          width: 60px;
+          height: 60px;
+        }
+        .icon{
+          position: relative;
+          font-size: 60px;
+          color: #fff;
+          top: 2px;
+          z-index: 10;
+        }
+      }
+      .banner-desc-txt{
+        margin-left: 20px;
+        .txt-title{
+          display: block;
+          font-size: $font-size-20;
+          line-height: 1.5;
+          margin-top: 10px;
+        }
+        .txt-desc{
+          font-size: $font-size;
+        }
+      }
+    }
+    .btn-info{
+      position: absolute;
+      right: 175px;
+      font-size: $font-size-16;
+      padding: 0 45px 0 25px;
+      height: 44px;
+      line-height: 42px;
+      background: $active-color;
+      border-radius: 999px;
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+      .icon{
+        position: absolute;
+        margin-left: 10px;
+        top: 0;
+        right: 15px;
+      }
+      &:hover{
+        transition: all .3s;
+        background: lighten($active-color, 10%)
+      }
+    }
+  }
+}
+/** 新闻动态 */
+.news-wrap{
+  height: 318px;
+  .news-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .flex-item,
+    .news-list{
+      flex: 1;
+    }
+    .flex-item{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      cursor: pointer;
+    }
+    .news-img{
+
+      margin-top: 18px;
+      img{
+        width: 210px;
+        height: 140px;
+      }
+    }
+    .news-desc{
+      margin-left: 15px;
+      margin-top: 16px;
+      .news-title{
+        // display: flex;
+        position: relative;
+        // flex-direction: row;
+        // justify-content: flex-start;
+        // align-items: center;
+        font-size: $font-size-16;
+        color: $font-color-333;
+        font-weight: bold;
+        text-indent: 28px;
+        height: 40px;
+        width: 256px;
+        .icon{
+          position: absolute;
+          color: #ee3232;
+          font-size: 25px;
+          left: -28px;
+          top: -3px;
+        }
+      }
+      .news-detail{
+        display: block;
+        margin-top: 16px;
+        line-height: 24px;
+        // line-height: 1.5;
+        font-size: $font-size-12;
+        color: $font-color-333;
+        width: 256px;
+      }
+    }
+    .news-list{
+      margin-left: 20px;
+      .news-item{
+        position: relative;
+        border-bottom: 1px solid #e3e3e3;
+        box-sizing: border-box;
+        line-height: 54px;
+        height: 54px;
+        &:hover{
+          background-color: #f2f2f2;
+        }
+        cursor: pointer;
+        .news-title,
+        .news-date,
+        .icon{
+          font-size: $font-size-12;
+          color: #404040;
+        }
+        .news-title{
+          @include overflowHidden;
+          max-width: 370px;
+          padding-left: 10px;
+        }
+        .news-date{
+          position: absolute;
+          right: 0;
+          top: 0;
+          .icon{
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+/** 视频 */
+.video-wrap{
+  height: 405px;
+  background-color: #f2f2f2;
+  .main-wrap{
+    position: relative;
+  }
+  .swiper-pagination{
+    margin: 0 auto;
+    // height: 40px;
+    width: 100%;
+    // line-height: 40px;
+    text-align: center;
+    bottom: -28px;
+  }
+
+  .my-bullet{
+    border-radius: 999px;
+    width: 14px;
+    height: 14px;
+    // margin: 0 10px;
+    margin-right: 15px;
+    display: inline-block;
+    background: #fff;
+    transition: all .3s;
+  }
+
+  .my-bullet-active{
+    background: #177fff;
+    width: 28px;
+  }
+  .slide-info{
+    width: 325px;
+    height: 345px;
+    background: #fff;
+    margin-top: $padding-20;
+  }
+  .video-img{
+    position: relative;
+    cursor: pointer;
+    background: #eee;
+    height: 185px;
+    .slide-img{
+      display: block;
+      width: 100%;
+      height: 185px;
+    }
+    .icon{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-size: 50px;
+      color: #fff;
+      margin-top: -25px;
+      margin-left: -25px;
+    }
+  }
+  .slide-desc{
+    // padding: 15px 10px 0;
+    .item-name{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      height: 54px;
+      line-height: 1.2;
+      vertical-align: middle;
+      font-size: $font-size-16;
+      color: $font-color;
+      font-weight: 500;
+      padding: 0 15px;
+    }
+    .item-desc{
+      line-height: 24px;
+      font-size: $font-size-12;
+      color: $font-color-333;
+      padding: 0 15px;
+      // background: green;
+      // overflow-y: auto;
+      // height: 110px;
+      // padding-bottom: 20px;
+    }
+  }
+}
+/** 班列 */
+
+/** 联系我们 */
+#video-play-wrap{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .6);
+  z-index: 999;
+  .video-model{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 960px;
+    height: 580px;
+    margin-left: -480px;
+    margin-top: -320px;
+    .video-play{
+      width: 100%;
+      height: 100%;
+    }
+    .close-video{
+      position: absolute;
+      right: -30px;
+      top: 30px;
+      font-size: 20px;
+      background: #ee3232;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+@import './index-media.scss';

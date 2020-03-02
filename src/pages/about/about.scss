@@ -1,0 +1,124 @@
+@import '../../style/common/custom.scss';
+/** 平台概览 **/
+.main-wrap{
+  position: relative;
+  .pt-title{
+    font-size: $font-size-20;
+    color: $font-color-333;
+    text-align: center;
+    line-height: 1;
+    margin-top: 40px;
+  }
+  .pt-icon-wrap{
+    position: relative;
+    margin-top: 40px;
+    .pt-icon{
+      display: flex;
+      position: relative;
+      justify-content: space-around;
+      &::before,
+      &::after{
+        position: absolute;
+        bottom: -42px;
+        content: '';
+        height: 30px;
+        border-left: 1px solid #cccccc;
+      }
+      .icon{
+        font-size: 100px;
+        color: #71b1ff;
+      }
+      &::before{
+        left: 98px;
+      }
+      &::after{
+        right: 98px;
+      }
+    }
+    .icon-txt{
+      position: relative;
+      height: 66px;
+      line-height: 66px;
+      text-align: center;
+      margin-top: 8px;
+      &::before{
+        position: absolute;
+        left: 98px;
+        right: 98px;
+        top: 50%;
+        content: '';
+        border-bottom: 1px solid #ccc;
+      }
+      .txt{
+        display: inline-block;
+        position: relative;
+        z-index: 5;
+        color: $active-color;
+        font-size: $font-size-18;
+        background: #fff;
+        padding: 0 20px;
+      }
+    }
+    .pt-desc{
+      line-height: 24px;
+      font-size: 12px;
+      color: #282828;
+      columns: 2;
+      padding-bottom: 30px;
+      column-gap: 30px;
+    }
+  }
+}
+.event-wrap{
+  // height: 225px;
+  height: 320px;
+  width: 100%;
+  background-color: #e9f3ff;
+  .main-wrap{
+    position: relative;
+    height: 100%;
+    &::before{
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      content: '';
+      width: 173px;
+      height: 130px;
+      background: url(../../assets/event-bg.png) center no-repeat;
+    }
+  }
+  .event-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .flex-item{
+    width: 50%;
+    padding-top: 40px;
+    .item-title,
+    .item-desc,
+    .item-txt{
+      color: $font-color-333;
+    }
+    .item-title{
+      font-size: $font-size-20;
+      line-height: 1;
+    }
+    .item-desc{
+      font-size: $font-size;
+      line-height: 18px;
+      width: 280px;
+      margin-top: 14px;
+    }
+    .item-txt{
+      font-size: $font-size-12;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+  }
+  // .event-items{
+  //   padding-top: 15px;
+  // }
+}
+
+@import './about-media.scss';

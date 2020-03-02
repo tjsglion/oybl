@@ -1,0 +1,101 @@
+@import '../../style/common/breadcrumb.scss';
+@import '../../style/mixins/index.scss';
+@import '../../style/common/news-common.scss';
+
+.mobile-show{
+  display: none;
+}
+#main > .main-wrap{
+  .news-info-wrap{
+    .news-item{
+      border-bottom: 1px solid $breadcrumb-border-color;
+      padding: $padding-20 $padding-20 15px;
+      cursor: pointer;
+      &:hover{
+        background-color: #e7f2ff;
+      }
+    }
+    .news-default{
+      .news-title{
+        @include overflowHidden();
+        font-size: $font-size-20;
+        color: $news-color;
+        line-height: 1;
+        max-width: 635px;
+      }
+      .news-info{
+        margin-top: 15px;
+        font-size: 0;
+        .publish,
+        .count,
+        .date{
+          display: inline-block;
+          line-height: 1;
+          color: #808080;
+          font-size: $font-size-12;
+        }
+        .publish,
+        .count{
+          width: 120px;
+        }
+        .count{
+          margin-left: 5px;
+        }
+        .date{
+          float: right;
+        }
+      }
+      .news-desc{
+        margin-top: 12px;
+        line-height: 24px;
+        color: $news-color;
+        font-size: $font-size;
+      }
+    }
+    .news-push{
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 20px;
+      margin-left: -20px;
+      // border-bottom: 1px solid $breadcrumb-border-color;
+      .news-img{
+        display: block;
+        height: 160px;
+        width: 260px;
+      }
+      .news-info{
+        margin-left: 30px;
+        flex: 1;
+        .news-date{
+          font-size: 36px;
+          color: $active-color;
+          line-height: 1;
+        }
+        .news-title,
+        .news-desc{
+          color: $news-color;
+        }
+        .news-title{
+          display: flex;
+          align-items: center;
+          height: 44px;
+          font-size: $font-size-20;
+          margin-top: 15px;
+        }
+        .news-desc{
+          font-size: $font-size;
+          line-height: 24px;
+          margin-top: 15px;
+        }
+      }
+    }
+    .news-pages{
+      padding-bottom: 20px;
+      .pager-wrapper{
+        text-align: left;
+      }
+    }
+  }
+}
+
+@import './news-media.scss';

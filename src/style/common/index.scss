@@ -1,0 +1,76 @@
+@import '../base/reset.scss';
+@import './custom.scss';
+@import '../font/iconfont.css';
+@import '../mixins/index.scss';
+html,
+body{
+    height: $max-height;
+}
+
+html{
+  font-size: 50px;
+}
+
+#container{
+  position: relative;
+  min-height: $max-height;
+  height: auto !important;
+  height: $max-height;
+}
+
+#headerWrap,
+#main,
+#footerWrap{
+  // position: relative;
+  width: $max-width;
+  .main-wrap{
+    margin: 0 auto;
+    width: $max-width-1024;
+    padding: 0 $padding-20;
+  }
+}
+
+#headerWrap{
+  position: absolute;
+  height: $header-height;
+  line-height: $header-height;
+  z-index: 100;
+  background: $font-color-white;
+}
+
+#main{
+  padding-top: $header-height;
+  padding-bottom: $footer-height;
+  // background: gold;
+}
+
+#footerWrap{
+  position: absolute;
+  bottom: 0px;
+  height: $footer-height;
+  background: $foot_bg_color;
+  clear: both;
+}
+
+@media all and (max-width: $max-width-750) {
+  #headerWrap{
+    height: px2rem($header-height-750);
+    line-height: px2rem($header-height-750);
+  }
+  #main{
+    padding-top: px2rem($header-height-750);
+    padding-bottom: px2rem($footer-height-750);
+  }
+  #footerWrap{
+    height: px2rem($footer-height-750);
+  }
+  #headerWrap,
+  #main,
+  #footerWrap {
+    .main-wrap{
+      width: px2rem(750);
+      overflow: hidden;
+      padding: 0 px2rem(30);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.banner-wrap{
+  width: 100%;
+  height: 220px;
+  .main-wrap{
+    position: relative;
+  }
+}
+.train-bg{
+  background: url(../../assets/train-banner.png) center no-repeat;
+  background-size: cover;
+}
+.news-bg{
+  background: url(../../assets/news-banner.png) center no-repeat;
+  background-size: cover;
+}
+.about-bg{
+  background: url(../../assets/about-banner.png) center no-repeat;
+  background-size: cover;
+}
+
+.banner-txt{
+  position: absolute;
+  right: -30px;
+  top: 5px;
+}
+.train-txt{
+  background: url(../../assets/train-txt.png) center no-repeat;
+  width:  337px;
+  height: 210px;
+}
+.news-txt{
+  background: url(../../assets/news-txt.png) center no-repeat;
+  width:  291px;
+  height: 210px;
+}
+.about-txt{
+  background: url(../../assets/about-us-txt.png) center no-repeat;
+  width:  289px;
+  height: 210px;
+}
+
+@import './index-media.scss';

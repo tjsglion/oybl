@@ -1,0 +1,167 @@
+@import '../../style/common/custom.scss';
+.mobile-show{
+  display: none;
+}
+.train-city{
+  position: relative;
+  width: 100%;
+  height: 430px;
+  background: #283441;
+  &::before{
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    content: '';
+    margin-left: -8px;
+    border: 8px solid transparent;
+    border-bottom-color: #283441;
+  }
+  &::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: url(../../assets/train-bg-2.png) center no-repeat;
+  }
+  .main-wrap{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 100%;
+    .flex-common{
+      position: relative;
+      width: 50%;
+      height: 100%;
+    }
+    .flex-left{
+      position: relative;
+      margin-right: $padding-20;
+      z-index: 10;
+      .color-white {
+        border-bottom-color: #535d67 !important;
+        .title-txt{
+          color: #fff !important;
+        }
+      }
+      .city-numb-name{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        margin-top: 70px;
+      }
+      .city-numb{
+        color: $active-color;
+        font-size: 24px;
+        .numb{
+          font-size: 120px;
+          font-family: 'd_a_b';
+        }
+      }
+      .city-name{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 280px;
+        height: 60px;
+        align-items: space-between;
+        margin-bottom: 15px;
+        margin-left: 30px;
+        // justify-content: ;
+        font-size: 0;
+        .name{
+          display: inline-block;
+          font-size: $font-size-16;
+          color: #fff;
+          margin-right: 28px;
+          &:nth-of-type(5n){
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .flex-right{
+      .slide-info{
+        position: relative;
+        margin-top: $padding-20;
+        height: 360px;
+      }
+      .city-img{
+        width: 512px;
+        height: 360px;
+      }
+      .slide-img{
+        display: block;
+        height: 100%;
+      }
+      .city-desc-info{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+        &::before{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          content: '';
+          background: rgba(0, 0, 0, .8);
+        }
+      }
+      .city-desc,
+      .city-name{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+      .city-name{
+        margin-left: 20px;
+        width: 70px;
+        font-size: $font-size-18;
+        color: $active-color;
+      }
+      .city-desc{
+        flex: 1;
+        font-size: $font-size-13;
+        color: #fff;
+        padding: 0 20px;
+        line-height: 1.5;
+      }
+    }
+    .my-bullet{
+      border-radius: 999px;
+      width: 14px;
+      height: 14px;
+      // margin: 0 10px;
+      margin-right: 15px;
+      display: inline-block;
+      background: #fff;
+      transition: all .3s;
+    }
+
+    .my-bullet-active{
+      background: #177fff;
+      width: 28px;
+    }
+    .swiper-pagination{
+      bottom: 15px;
+    }
+    .city-data-desc{
+      position: absolute;
+      right: 0;
+      bottom: 15px;
+      font-size: $font-size-12;
+      color: #fff;
+      z-index: 10;
+    }
+  }
+}
+
+@import './train-media.scss';
