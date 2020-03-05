@@ -40,7 +40,7 @@ export default {
           { txt: '业务联系人' , phone: '18561361267'},
           { txt: '马春波' }
         ]},
-        { icon: 'icon-E-mail', title: 'E-mail', desc: [{ txt: 'ouyabanlieqlh@163.com' }] },
+        { icon: 'icon-E-mail', title: 'E-mail', desc: [{ txt: 'machunbo@sdhsg.com' }] },
         { icon: 'icon-weixin', title: '微信公众号', desc: [{ txt: '齐鲁号欧亚班列'}, {wx: require('../../assets/index-wx-code.png')}] }
       ]
     }
